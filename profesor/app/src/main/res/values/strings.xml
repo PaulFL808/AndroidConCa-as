@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">Profesor Asistencia</string>
+    <string name="new_session">Nueva sesión</string>
+    <string name="create_session">Crear sesión</string>
+    <string name="course_name_hint">Nombre del curso</string>
+    <string name="create">Crear</string>
+    <string name="cancel">Cancelar</string>
+    <string name="active_session">Sesión Activa</string>
+    <string name="students_count">Asistentes: %d</string>
+    <string name="close_session">Cerrar sesión</string>
+</resources>
