@@ -26,7 +26,7 @@ class MainFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         
-        binding.btnNewSession.setOnClickListener {
+        binding.fabNewSession.setOnClickListener {
             val activeId = viewModel.getActiveSessionId()
             if (activeId != null) {
                 val bundle = Bundle().apply { putString("sessionId", activeId) }

@@ -1,0 +1,22 @@
+[
+    {
+        "merged": "com.example.asistencia.profesor.app-mergeDebugResources-51:/layout/activity_main.xml",
+        "source": "com.example.asistencia.profesor.app-main-54:/layout/activity_main.xml"
+    },
+    {
+        "merged": "com.example.asistencia.profesor.app-mergeDebugResources-51:/layout/fragment_create_session.xml",
+        "source": "com.example.asistencia.profesor.app-main-54:/layout/fragment_create_session.xml"
+    },
+    {
+        "merged": "com.example.asistencia.profesor.app-mergeDebugResources-51:/layout/fragment_main.xml",
+        "source": "com.example.asistencia.profesor.app-main-54:/layout/fragment_main.xml"
+    },
+    {
+        "merged": "com.example.asistencia.profesor.app-mergeDebugResources-51:/layout/item_student.xml",
+        "source": "com.example.asistencia.profesor.app-main-54:/layout/item_student.xml"
+    },
+    {
+        "merged": "com.example.asistencia.profesor.app-mergeDebugResources-51:/layout/fragment_active_session.xml",
+        "source": "com.example.asistencia.profesor.app-main-54:/layout/fragment_active_session.xml"
+    }
+]
