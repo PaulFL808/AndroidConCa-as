@@ -3224,6 +3224,7 @@ int id action_image 0x7f08003f
 int id action_loginFragment_to_mainFragment 0x7f080213
 int id action_mainFragment_to_activeSessionFragment 0x7f080040
 int id action_mainFragment_to_createSessionFragment 0x7f080041
+int id action_mainFragment_to_loginFragment 0x7f080220
 int id action_menu_divider 0x7f080042
 int id action_menu_presenter 0x7f080043
 int id action_mode_bar 0x7f080044
@@ -3268,6 +3269,7 @@ int id btnCancel 0x7f08006a
 int id btnCloseSession 0x7f08006b
 int id btnCreate 0x7f08006c
 int id btnLogin 0x7f080214
+int id btnLogout 0x7f080221
 int id buttonPanel 0x7f08006e
 int id cache_measures 0x7f08006f
 int id callMeasure 0x7f080070

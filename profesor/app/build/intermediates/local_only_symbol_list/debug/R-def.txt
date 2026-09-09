@@ -5,11 +5,13 @@ id action_createSessionFragment_to_activeSessionFragment
 id action_loginFragment_to_mainFragment
 id action_mainFragment_to_activeSessionFragment
 id action_mainFragment_to_createSessionFragment
+id action_mainFragment_to_loginFragment
 id activeSessionFragment
 id btnCancel
 id btnCloseSession
 id btnCreate
 id btnLogin
+id btnLogout
 id createSessionFragment
 id etCourseName
 id etPassword

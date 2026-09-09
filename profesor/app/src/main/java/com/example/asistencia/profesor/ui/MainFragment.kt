@@ -9,11 +9,14 @@ import androidx.fragment.app.viewModels
 import androidx.navigation.fragment.findNavController
 import com.example.asistencia.profesor.databinding.FragmentMainBinding
 
+import androidx.recyclerview.widget.LinearLayoutManager
+
 class MainFragment : Fragment() {
 
     private var _binding: FragmentMainBinding? = null
     private val binding get() = _binding!!
     private val viewModel: MainViewModel by viewModels()
+    private val adapter = PastSessionsAdapter()
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -25,6 +28,13 @@ class MainFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+        
+        binding.rvPastSessions.layoutManager = LinearLayoutManager(requireContext())
+        binding.rvPastSessions.adapter = adapter
+        
+        viewModel.pastSessions.observe(viewLifecycleOwner) { sessions ->
+            adapter.setSessions(sessions)
+        }
         
         binding.fabNewSession.setOnClickListener {
             val activeId = viewModel.getActiveSessionId()

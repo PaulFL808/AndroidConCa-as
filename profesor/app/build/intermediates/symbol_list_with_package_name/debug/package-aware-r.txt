@@ -3225,6 +3225,7 @@ id action_image
 id action_loginFragment_to_mainFragment
 id action_mainFragment_to_activeSessionFragment
 id action_mainFragment_to_createSessionFragment
+id action_mainFragment_to_loginFragment
 id action_menu_divider
 id action_menu_presenter
 id action_mode_bar
@@ -3269,6 +3270,7 @@ id btnCancel
 id btnCloseSession
 id btnCreate
 id btnLogin
+id btnLogout
 id buttonPanel
 id cache_measures
 id callMeasure

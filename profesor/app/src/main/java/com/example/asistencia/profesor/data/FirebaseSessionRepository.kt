@@ -91,4 +91,36 @@ class FirebaseSessionRepository(databaseUrl: String) : SessionRepository {
     override fun getActiveSessionId(): String? {
         return currentSessionId
     }
+
+    override fun getPastSessions(): LiveData<List<Session>> {
+        val liveData = MutableLiveData<List<Session>>()
+        database.child("sesiones").orderByChild("activa").equalTo(false)
+            .addValueEventListener(object : ValueEventListener {
+                override fun onDataChange(snapshot: DataSnapshot) {
+                    val pastSessions = mutableListOf<Session>()
+                    for (sessionSnapshot in snapshot.children) {
+                        val sessionId = sessionSnapshot.key ?: continue
+                        val codigo = sessionSnapshot.child("codigo").getValue(String::class.java) ?: ""
+                        val curso = sessionSnapshot.child("curso").getValue(String::class.java) ?: ""
+                        
+                        val alumnosMap = mutableMapOf<String, Student>()
+                        val alumnosSnapshot = sessionSnapshot.child("alumnos")
+                        for (child in alumnosSnapshot.children) {
+                            val id = child.key ?: continue
+                            val nombre = child.child("nombre").getValue(String::class.java) ?: ""
+                            val horaRegistro = child.child("horaRegistro").getValue(String::class.java) ?: ""
+                            alumnosMap[id] = Student(id, nombre, horaRegistro)
+                        }
+                        
+                        pastSessions.add(Session(sessionId, false, codigo, curso, alumnosMap))
+                    }
+                    liveData.postValue(pastSessions)
+                }
+
+                override fun onCancelled(error: DatabaseError) {
+                    // Manejo de error
+                }
+            })
+        return liveData
+    }
 }

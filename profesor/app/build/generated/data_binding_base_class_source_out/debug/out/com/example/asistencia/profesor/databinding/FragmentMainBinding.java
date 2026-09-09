@@ -4,6 +4,7 @@ package com.example.asistencia.profesor.databinding;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.coordinatorlayout.widget.CoordinatorLayout;
@@ -21,14 +22,18 @@ public final class FragmentMainBinding implements ViewBinding {
   private final CoordinatorLayout rootView;
 
   @NonNull
+  public final Button btnLogout;
+
+  @NonNull
   public final FloatingActionButton fabNewSession;
 
   @NonNull
   public final MaterialToolbar toolbar;
 
-  private FragmentMainBinding(@NonNull CoordinatorLayout rootView,
+  private FragmentMainBinding(@NonNull CoordinatorLayout rootView, @NonNull Button btnLogout,
       @NonNull FloatingActionButton fabNewSession, @NonNull MaterialToolbar toolbar) {
     this.rootView = rootView;
+    this.btnLogout = btnLogout;
     this.fabNewSession = fabNewSession;
     this.toolbar = toolbar;
   }
@@ -60,6 +65,12 @@ public final class FragmentMainBinding implements ViewBinding {
     // This is done to optimize the compiled bytecode for size and performance.
     int id;
     missingId: {
+      id = R.id.btnLogout;
+      Button btnLogout = ViewBindings.findChildViewById(rootView, id);
+      if (btnLogout == null) {
+        break missingId;
+      }
+
       id = R.id.fabNewSession;
       FloatingActionButton fabNewSession = ViewBindings.findChildViewById(rootView, id);
       if (fabNewSession == null) {
@@ -72,7 +83,8 @@ public final class FragmentMainBinding implements ViewBinding {
         break missingId;
       }
 
-      return new FragmentMainBinding((CoordinatorLayout) rootView, fabNewSession, toolbar);
+      return new FragmentMainBinding((CoordinatorLayout) rootView, btnLogout, fabNewSession,
+          toolbar);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

@@ -50,6 +50,12 @@ class MockSessionRepository : SessionRepository {
     override fun getActiveSessionId(): String? {
         return currentSessionId
     }
+
+    override fun getPastSessions(): LiveData<List<Session>> {
+        val liveData = MutableLiveData<List<Session>>()
+        liveData.value = emptyList() // Mock doesn't store past sessions for now
+        return liveData
+    }
     
     private fun simulateStudentsJoining() {
         Thread {

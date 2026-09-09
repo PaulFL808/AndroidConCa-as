@@ -7,4 +7,5 @@ interface SessionRepository {
     fun closeSession(sessionId: String, onComplete: () -> Unit)
     fun getSession(sessionId: String): LiveData<Session?>
     fun getActiveSessionId(): String?
+    fun getPastSessions(): LiveData<List<Session>>
 }
