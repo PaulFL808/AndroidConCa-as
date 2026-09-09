@@ -4,20 +4,20 @@ package com.example.asistencia.profesor.databinding;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.LinearLayout;
 import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.viewbinding.ViewBinding;
 import androidx.viewbinding.ViewBindings;
 import com.example.asistencia.profesor.R;
+import com.google.android.material.card.MaterialCardView;
 import java.lang.NullPointerException;
 import java.lang.Override;
 import java.lang.String;
 
 public final class ItemStudentBinding implements ViewBinding {
   @NonNull
-  private final LinearLayout rootView;
+  private final MaterialCardView rootView;
 
   @NonNull
   public final TextView tvStudentId;
@@ -28,7 +28,7 @@ public final class ItemStudentBinding implements ViewBinding {
   @NonNull
   public final TextView tvStudentTime;
 
-  private ItemStudentBinding(@NonNull LinearLayout rootView, @NonNull TextView tvStudentId,
+  private ItemStudentBinding(@NonNull MaterialCardView rootView, @NonNull TextView tvStudentId,
       @NonNull TextView tvStudentName, @NonNull TextView tvStudentTime) {
     this.rootView = rootView;
     this.tvStudentId = tvStudentId;
@@ -38,7 +38,7 @@ public final class ItemStudentBinding implements ViewBinding {
 
   @Override
   @NonNull
-  public LinearLayout getRoot() {
+  public MaterialCardView getRoot() {
     return rootView;
   }
 
@@ -81,7 +81,7 @@ public final class ItemStudentBinding implements ViewBinding {
         break missingId;
       }
 
-      return new ItemStudentBinding((LinearLayout) rootView, tvStudentId, tvStudentName,
+      return new ItemStudentBinding((MaterialCardView) rootView, tvStudentId, tvStudentName,
           tvStudentTime);
     }
     String missingId = rootView.getResources().getResourceName(id);

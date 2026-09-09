@@ -5,27 +5,31 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
-import android.widget.LinearLayout;
 import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+import androidx.coordinatorlayout.widget.CoordinatorLayout;
 import androidx.recyclerview.widget.RecyclerView;
 import androidx.viewbinding.ViewBinding;
 import androidx.viewbinding.ViewBindings;
 import com.example.asistencia.profesor.R;
+import com.google.android.material.appbar.MaterialToolbar;
 import java.lang.NullPointerException;
 import java.lang.Override;
 import java.lang.String;
 
 public final class FragmentActiveSessionBinding implements ViewBinding {
   @NonNull
-  private final LinearLayout rootView;
+  private final CoordinatorLayout rootView;
 
   @NonNull
   public final Button btnCloseSession;
 
   @NonNull
   public final RecyclerView rvStudents;
+
+  @NonNull
+  public final MaterialToolbar toolbarActive;
 
   @NonNull
   public final TextView tvCourseName;
@@ -36,13 +40,14 @@ public final class FragmentActiveSessionBinding implements ViewBinding {
   @NonNull
   public final TextView tvStudentsCount;
 
-  private FragmentActiveSessionBinding(@NonNull LinearLayout rootView,
+  private FragmentActiveSessionBinding(@NonNull CoordinatorLayout rootView,
       @NonNull Button btnCloseSession, @NonNull RecyclerView rvStudents,
-      @NonNull TextView tvCourseName, @NonNull TextView tvSessionCode,
-      @NonNull TextView tvStudentsCount) {
+      @NonNull MaterialToolbar toolbarActive, @NonNull TextView tvCourseName,
+      @NonNull TextView tvSessionCode, @NonNull TextView tvStudentsCount) {
     this.rootView = rootView;
     this.btnCloseSession = btnCloseSession;
     this.rvStudents = rvStudents;
+    this.toolbarActive = toolbarActive;
     this.tvCourseName = tvCourseName;
     this.tvSessionCode = tvSessionCode;
     this.tvStudentsCount = tvStudentsCount;
@@ -50,7 +55,7 @@ public final class FragmentActiveSessionBinding implements ViewBinding {
 
   @Override
   @NonNull
-  public LinearLayout getRoot() {
+  public CoordinatorLayout getRoot() {
     return rootView;
   }
 
@@ -87,6 +92,12 @@ public final class FragmentActiveSessionBinding implements ViewBinding {
         break missingId;
       }
 
+      id = R.id.toolbarActive;
+      MaterialToolbar toolbarActive = ViewBindings.findChildViewById(rootView, id);
+      if (toolbarActive == null) {
+        break missingId;
+      }
+
       id = R.id.tvCourseName;
       TextView tvCourseName = ViewBindings.findChildViewById(rootView, id);
       if (tvCourseName == null) {
@@ -105,8 +116,8 @@ public final class FragmentActiveSessionBinding implements ViewBinding {
         break missingId;
       }
 
-      return new FragmentActiveSessionBinding((LinearLayout) rootView, btnCloseSession, rvStudents,
-          tvCourseName, tvSessionCode, tvStudentsCount);
+      return new FragmentActiveSessionBinding((CoordinatorLayout) rootView, btnCloseSession,
+          rvStudents, toolbarActive, tvCourseName, tvSessionCode, tvStudentsCount);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

@@ -38,6 +38,10 @@ class MainFragment : Fragment() {
                 findNavController().navigate(com.example.asistencia.profesor.R.id.action_mainFragment_to_createSessionFragment)
             }
         }
+        
+        binding.btnLogout.setOnClickListener {
+            findNavController().navigate(com.example.asistencia.profesor.R.id.action_mainFragment_to_loginFragment)
+        }
     }
 
     override fun onDestroyView() {

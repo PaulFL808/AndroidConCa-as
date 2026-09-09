@@ -4,8 +4,32 @@
         "source": "com.example.asistencia.profesor.app-main-54:/navigation/nav_graph.xml"
     },
     {
-        "merged": "com.example.asistencia.profesor.app-merged_res-52:/layout_activity_main.xml.flat",
-        "source": "com.example.asistencia.profesor.app-main-54:/layout/activity_main.xml"
+        "merged": "C:\\Users\\fngg7\\.gradle\\daemon\\8.2\\com.example.asistencia.profesor.app-merged_res-52:\\layout_item_student.xml.flat",
+        "source": "C:\\Users\\fngg7\\.gradle\\daemon\\8.2\\com.example.asistencia.profesor.app-main-54:\\layout\\item_student.xml"
+    },
+    {
+        "merged": "C:\\Users\\fngg7\\.gradle\\daemon\\8.2\\com.example.asistencia.profesor.app-merged_res-52:\\navigation_nav_graph.xml.flat",
+        "source": "C:\\Users\\fngg7\\.gradle\\daemon\\8.2\\com.example.asistencia.profesor.app-main-54:\\navigation\\nav_graph.xml"
+    },
+    {
+        "merged": "C:\\Users\\fngg7\\.gradle\\daemon\\8.2\\com.example.asistencia.profesor.app-merged_res-52:\\layout_fragment_create_session.xml.flat",
+        "source": "C:\\Users\\fngg7\\.gradle\\daemon\\8.2\\com.example.asistencia.profesor.app-main-54:\\layout\\fragment_create_session.xml"
+    },
+    {
+        "merged": "C:\\Users\\fngg7\\.gradle\\daemon\\8.2\\com.example.asistencia.profesor.app-merged_res-52:\\layout_activity_main.xml.flat",
+        "source": "C:\\Users\\fngg7\\.gradle\\daemon\\8.2\\com.example.asistencia.profesor.app-main-54:\\layout\\activity_main.xml"
+    },
+    {
+        "merged": "C:\\Users\\fngg7\\.gradle\\daemon\\8.2\\com.example.asistencia.profesor.app-merged_res-52:\\layout_fragment_active_session.xml.flat",
+        "source": "C:\\Users\\fngg7\\.gradle\\daemon\\8.2\\com.example.asistencia.profesor.app-main-54:\\layout\\fragment_active_session.xml"
+    },
+    {
+        "merged": "C:\\Users\\fngg7\\.gradle\\daemon\\8.2\\com.example.asistencia.profesor.app-merged_res-52:\\layout_fragment_main.xml.flat",
+        "source": "C:\\Users\\fngg7\\.gradle\\daemon\\8.2\\com.example.asistencia.profesor.app-main-54:\\layout\\fragment_main.xml"
+    },
+    {
+        "merged": "com.example.asistencia.profesor.app-merged_res-52:/layout_fragment_login.xml.flat",
+        "source": "com.example.asistencia.profesor.app-main-54:/layout/fragment_login.xml"
     },
     {
         "merged": "com.example.asistencia.profesor.app-merged_res-52:/layout_item_student.xml.flat",

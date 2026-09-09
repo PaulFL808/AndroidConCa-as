@@ -3222,6 +3222,7 @@ id action_context_bar
 id action_createSessionFragment_to_activeSessionFragment
 id action_divider
 id action_image
+id action_loginFragment_to_mainFragment
 id action_mainFragment_to_activeSessionFragment
 id action_mainFragment_to_createSessionFragment
 id action_menu_divider
@@ -3267,7 +3268,7 @@ id bounceStart
 id btnCancel
 id btnCloseSession
 id btnCreate
-id btnNewSession
+id btnLogin
 id buttonPanel
 id cache_measures
 id callMeasure
@@ -3352,9 +3353,12 @@ id endToStart
 id enterAlways
 id enterAlwaysCollapsed
 id etCourseName
+id etPassword
+id etUsername
 id exitUntilCollapsed
 id expand_activities_button
 id expanded_menu
+id fabNewSession
 id fade
 id fill
 id fill_horizontal
@@ -3402,6 +3406,7 @@ id invisible
 id inward
 id italic
 id item_touch_helper_previous_elevation
+id ivLogo
 id jumpToEnd
 id jumpToStart
 id labeled
@@ -3416,6 +3421,7 @@ id linear
 id listMode
 id list_item
 id locale
+id loginFragment
 id ltr
 id m3_side_sheet
 id mainFragment
@@ -3643,11 +3649,16 @@ id textinput_helper_text
 id textinput_placeholder
 id textinput_prefix_text
 id textinput_suffix_text
+id tilPassword
+id tilUsername
 id time
 id title
 id titleDividerNoCustom
 id title_template
 id toggle
+id toolbar
+id toolbarActive
+id toolbarCreate
 id top
 id topPanel
 id touch_outside
@@ -3665,6 +3676,7 @@ id tvStudentId
 id tvStudentName
 id tvStudentTime
 id tvStudentsCount
+id tvTitle
 id unchecked
 id uniform
 id unlabeled
@@ -3824,6 +3836,7 @@ layout design_text_input_end_icon
 layout design_text_input_start_icon
 layout fragment_active_session
 layout fragment_create_session
+layout fragment_login
 layout fragment_main
 layout ime_base_split_test_activity
 layout ime_secondary_split_test_activity

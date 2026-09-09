@@ -4,32 +4,38 @@ package com.example.asistencia.profesor.databinding;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Button;
-import android.widget.LinearLayout;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+import androidx.coordinatorlayout.widget.CoordinatorLayout;
 import androidx.viewbinding.ViewBinding;
 import androidx.viewbinding.ViewBindings;
 import com.example.asistencia.profesor.R;
+import com.google.android.material.appbar.MaterialToolbar;
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import java.lang.NullPointerException;
 import java.lang.Override;
 import java.lang.String;
 
 public final class FragmentMainBinding implements ViewBinding {
   @NonNull
-  private final LinearLayout rootView;
+  private final CoordinatorLayout rootView;
 
   @NonNull
-  public final Button btnNewSession;
+  public final FloatingActionButton fabNewSession;
 
-  private FragmentMainBinding(@NonNull LinearLayout rootView, @NonNull Button btnNewSession) {
+  @NonNull
+  public final MaterialToolbar toolbar;
+
+  private FragmentMainBinding(@NonNull CoordinatorLayout rootView,
+      @NonNull FloatingActionButton fabNewSession, @NonNull MaterialToolbar toolbar) {
     this.rootView = rootView;
-    this.btnNewSession = btnNewSession;
+    this.fabNewSession = fabNewSession;
+    this.toolbar = toolbar;
   }
 
   @Override
   @NonNull
-  public LinearLayout getRoot() {
+  public CoordinatorLayout getRoot() {
     return rootView;
   }
 
@@ -54,13 +60,19 @@ public final class FragmentMainBinding implements ViewBinding {
     // This is done to optimize the compiled bytecode for size and performance.
     int id;
     missingId: {
-      id = R.id.btnNewSession;
-      Button btnNewSession = ViewBindings.findChildViewById(rootView, id);
-      if (btnNewSession == null) {
+      id = R.id.fabNewSession;
+      FloatingActionButton fabNewSession = ViewBindings.findChildViewById(rootView, id);
+      if (fabNewSession == null) {
         break missingId;
       }
 
-      return new FragmentMainBinding((LinearLayout) rootView, btnNewSession);
+      id = R.id.toolbar;
+      MaterialToolbar toolbar = ViewBindings.findChildViewById(rootView, id);
+      if (toolbar == null) {
+        break missingId;
+      }
+
+      return new FragmentMainBinding((CoordinatorLayout) rootView, fabNewSession, toolbar);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

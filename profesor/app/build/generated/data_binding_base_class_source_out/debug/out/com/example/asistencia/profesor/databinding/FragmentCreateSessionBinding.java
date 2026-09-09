@@ -5,12 +5,13 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
-import android.widget.LinearLayout;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+import androidx.coordinatorlayout.widget.CoordinatorLayout;
 import androidx.viewbinding.ViewBinding;
 import androidx.viewbinding.ViewBindings;
 import com.example.asistencia.profesor.R;
+import com.google.android.material.appbar.MaterialToolbar;
 import com.google.android.material.textfield.TextInputEditText;
 import java.lang.NullPointerException;
 import java.lang.Override;
@@ -18,7 +19,7 @@ import java.lang.String;
 
 public final class FragmentCreateSessionBinding implements ViewBinding {
   @NonNull
-  private final LinearLayout rootView;
+  private final CoordinatorLayout rootView;
 
   @NonNull
   public final Button btnCancel;
@@ -29,17 +30,22 @@ public final class FragmentCreateSessionBinding implements ViewBinding {
   @NonNull
   public final TextInputEditText etCourseName;
 
-  private FragmentCreateSessionBinding(@NonNull LinearLayout rootView, @NonNull Button btnCancel,
-      @NonNull Button btnCreate, @NonNull TextInputEditText etCourseName) {
+  @NonNull
+  public final MaterialToolbar toolbarCreate;
+
+  private FragmentCreateSessionBinding(@NonNull CoordinatorLayout rootView,
+      @NonNull Button btnCancel, @NonNull Button btnCreate, @NonNull TextInputEditText etCourseName,
+      @NonNull MaterialToolbar toolbarCreate) {
     this.rootView = rootView;
     this.btnCancel = btnCancel;
     this.btnCreate = btnCreate;
     this.etCourseName = etCourseName;
+    this.toolbarCreate = toolbarCreate;
   }
 
   @Override
   @NonNull
-  public LinearLayout getRoot() {
+  public CoordinatorLayout getRoot() {
     return rootView;
   }
 
@@ -82,8 +88,14 @@ public final class FragmentCreateSessionBinding implements ViewBinding {
         break missingId;
       }
 
-      return new FragmentCreateSessionBinding((LinearLayout) rootView, btnCancel, btnCreate,
-          etCourseName);
+      id = R.id.toolbarCreate;
+      MaterialToolbar toolbarCreate = ViewBindings.findChildViewById(rootView, id);
+      if (toolbarCreate == null) {
+        break missingId;
+      }
+
+      return new FragmentCreateSessionBinding((CoordinatorLayout) rootView, btnCancel, btnCreate,
+          etCourseName, toolbarCreate);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

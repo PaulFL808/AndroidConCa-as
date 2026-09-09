@@ -1,4 +1,4 @@
-#Mon Sep 07 11:53:33 CLST 2026
+#Wed Sep 09 09:17:11 CLST 2026
 base.0=C\:\\Users\\fngg7\\Desktop\\android con ca\\AndroidConCa-as\\profesor\\app\\build\\intermediates\\dex\\debug\\mergeExtDexDebug\\classes.dex
 base.1=C\:\\Users\\fngg7\\Desktop\\android con ca\\AndroidConCa-as\\profesor\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\0\\classes.dex
 base.2=C\:\\Users\\fngg7\\Desktop\\android con ca\\AndroidConCa-as\\profesor\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\12\\classes.dex
