@@ -87,7 +87,7 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal"
                 android:layout_marginTop="16dp"
-                android:text="Cerrar sesión de Administrador"
+                android:text="Cerrar sesión de Profesor"
                 android:textColor="@color/design_default_color_error" />
 
         </LinearLayout>

@@ -8,6 +8,7 @@ import android.widget.Button;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.coordinatorlayout.widget.CoordinatorLayout;
+import androidx.recyclerview.widget.RecyclerView;
 import androidx.viewbinding.ViewBinding;
 import androidx.viewbinding.ViewBindings;
 import com.example.asistencia.profesor.R;
@@ -28,13 +29,18 @@ public final class FragmentMainBinding implements ViewBinding {
   public final FloatingActionButton fabNewSession;
 
   @NonNull
+  public final RecyclerView rvPastSessions;
+
+  @NonNull
   public final MaterialToolbar toolbar;
 
   private FragmentMainBinding(@NonNull CoordinatorLayout rootView, @NonNull Button btnLogout,
-      @NonNull FloatingActionButton fabNewSession, @NonNull MaterialToolbar toolbar) {
+      @NonNull FloatingActionButton fabNewSession, @NonNull RecyclerView rvPastSessions,
+      @NonNull MaterialToolbar toolbar) {
     this.rootView = rootView;
     this.btnLogout = btnLogout;
     this.fabNewSession = fabNewSession;
+    this.rvPastSessions = rvPastSessions;
     this.toolbar = toolbar;
   }
 
@@ -77,6 +83,12 @@ public final class FragmentMainBinding implements ViewBinding {
         break missingId;
       }
 
+      id = R.id.rvPastSessions;
+      RecyclerView rvPastSessions = ViewBindings.findChildViewById(rootView, id);
+      if (rvPastSessions == null) {
+        break missingId;
+      }
+
       id = R.id.toolbar;
       MaterialToolbar toolbar = ViewBindings.findChildViewById(rootView, id);
       if (toolbar == null) {
@@ -84,7 +96,7 @@ public final class FragmentMainBinding implements ViewBinding {
       }
 
       return new FragmentMainBinding((CoordinatorLayout) rootView, btnLogout, fabNewSession,
-          toolbar);
+          rvPastSessions, toolbar);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

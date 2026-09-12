@@ -22,6 +22,7 @@ id loginFragment
 id mainFragment
 id nav_graph
 id nav_host_fragment
+id rvPastSessions
 id rvStudents
 id tilPassword
 id tilUsername
@@ -40,6 +41,7 @@ layout fragment_active_session
 layout fragment_create_session
 layout fragment_login
 layout fragment_main
+layout item_past_session
 layout item_student
 navigation nav_graph
 string active_session

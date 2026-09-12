@@ -1,11 +1,11 @@
 [
     {
-        "merged": "C:\\Users\\fngg7\\.gradle\\daemon\\8.2\\com.example.asistencia.profesor.app-merged_res-52:\\layout_fragment_active_session.xml.flat",
-        "source": "C:\\Users\\fngg7\\.gradle\\daemon\\8.2\\com.example.asistencia.profesor.app-main-54:\\layout\\fragment_active_session.xml"
+        "merged": "C:\\Users\\fngg7\\.gradle\\daemon\\8.2\\com.example.asistencia.profesor.app-merged_res-52:\\layout_item_past_session.xml.flat",
+        "source": "C:\\Users\\fngg7\\.gradle\\daemon\\8.2\\com.example.asistencia.profesor.app-main-54:\\layout\\item_past_session.xml"
     },
     {
-        "merged": "com.example.asistencia.profesor.app-merged_res-52:/navigation_nav_graph.xml.flat",
-        "source": "com.example.asistencia.profesor.app-main-54:/navigation/nav_graph.xml"
+        "merged": "C:\\Users\\fngg7\\.gradle\\daemon\\8.2\\com.example.asistencia.profesor.app-merged_res-52:\\layout_fragment_active_session.xml.flat",
+        "source": "C:\\Users\\fngg7\\.gradle\\daemon\\8.2\\com.example.asistencia.profesor.app-main-54:\\layout\\fragment_active_session.xml"
     },
     {
         "merged": "C:\\Users\\fngg7\\.gradle\\daemon\\8.2\\com.example.asistencia.profesor.app-merged_res-52:\\navigation_nav_graph.xml.flat",

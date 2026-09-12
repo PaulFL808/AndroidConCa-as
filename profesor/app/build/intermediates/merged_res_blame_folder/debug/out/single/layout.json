@@ -16,6 +16,10 @@
         "source": "com.example.asistencia.profesor.app-main-54:/layout/fragment_main.xml"
     },
     {
+        "merged": "C:\\Users\\fngg7\\.gradle\\daemon\\8.2\\com.example.asistencia.profesor.app-mergeDebugResources-51:\\layout\\item_past_session.xml",
+        "source": "C:\\Users\\fngg7\\.gradle\\daemon\\8.2\\com.example.asistencia.profesor.app-main-54:\\layout\\item_past_session.xml"
+    },
+    {
         "merged": "C:\\Users\\fngg7\\.gradle\\daemon\\8.2\\com.example.asistencia.profesor.app-mergeDebugResources-51:\\layout\\fragment_login.xml",
         "source": "C:\\Users\\fngg7\\.gradle\\daemon\\8.2\\com.example.asistencia.profesor.app-main-54:\\layout\\fragment_login.xml"
     },

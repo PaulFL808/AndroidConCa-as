@@ -6,7 +6,9 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.asistencia.profesor.data.Session
 import com.example.asistencia.profesor.databinding.ItemPastSessionBinding
 
-class PastSessionsAdapter : RecyclerView.Adapter<PastSessionsAdapter.ViewHolder>() {
+class PastSessionsAdapter(
+    private val onSessionClick: (String) -> Unit
+) : RecyclerView.Adapter<PastSessionsAdapter.ViewHolder>() {
 
     private var sessions = listOf<Session>()
 
@@ -21,7 +23,11 @@ class PastSessionsAdapter : RecyclerView.Adapter<PastSessionsAdapter.ViewHolder>
     }
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
-        holder.bind(sessions[position])
+        val session = sessions[position]
+        holder.bind(session)
+        holder.itemView.setOnClickListener {
+            onSessionClick(session.id)
+        }
     }
 
     override fun getItemCount(): Int = sessions.size

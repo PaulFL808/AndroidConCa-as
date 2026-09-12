@@ -16,7 +16,7 @@ class MainFragment : Fragment() {
     private var _binding: FragmentMainBinding? = null
     private val binding get() = _binding!!
     private val viewModel: MainViewModel by viewModels()
-    private val adapter = PastSessionsAdapter()
+    private lateinit var adapter: PastSessionsAdapter
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -28,6 +28,14 @@ class MainFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+        
+        adapter = PastSessionsAdapter { sessionId ->
+            val bundle = Bundle().apply { putString("sessionId", sessionId) }
+            findNavController().navigate(
+                com.example.asistencia.profesor.R.id.action_mainFragment_to_activeSessionFragment,
+                bundle
+            )
+        }
         
         binding.rvPastSessions.layoutManager = LinearLayoutManager(requireContext())
         binding.rvPastSessions.adapter = adapter
